@@ -103,12 +103,16 @@ async function getTopKClasses(logits, topK) {
     topkValues[i] = valuesAndIndices[i].value;
     topkIndices[i] = valuesAndIndices[i].index;
   }
+  const summ = 0;
+  for (let i = 0; i < topkIndices.length; i++) {
+    summ = summ + topkValues[i]
+  }
 
   const topClassesAndProbs = [];
   for (let i = 0; i < topkIndices.length; i++) {
     topClassesAndProbs.push({
       className: CLASSES[topkIndices[i]],
-      probability: topkValues[i]
+      probability: topkValues[i]*(1/summ)
     })
   }
   return topClassesAndProbs;
