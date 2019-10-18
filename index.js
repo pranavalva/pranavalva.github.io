@@ -1,15 +1,15 @@
 CLASSES = {
-  0: 'c0',
-  1: 'c1',
-  2: 'c2',
-  3: 'c3',
-  4: 'c4',
+  0: 'Butler',
+  1: 'Greene (Law)',
+  2: 'Low Library',
+  3: 'St. Pauls',
+  4: 'Uris',
 };
 
 const MODEL_PATH =
     'model.json';
 
-const IMAGE_SIZE = 192;
+const IMAGE_SIZE = 256;
 const TOPK_PREDICTIONS = 5;
 
 let my_model;
